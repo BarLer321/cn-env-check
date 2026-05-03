@@ -1,20 +1,21 @@
 # cn-env-check
 国内使用Claude code检测网络环境以及是否被墙，并配置镜像网站
+ 
+ 
  Checks 7 tools (Node.js, Python, Chrome, LibreOffice, Pandoc, Poppler, Git), reports version + path for each, and
   issues a GO/NO-GO verdict:
 
-  ┌─────────┬─────────────────────────────────────┐
-  │ Status  │               Meaning               │
-  ├─────────┼─────────────────────────────────────┤
-  │ OK      │ Installed, good version, path known │
-  ├─────────┼─────────────────────────────────────┤
-  │ MISSING │ Not found anywhere                  │
-  ├─────────┼─────────────────────────────────────┤
-  │ OLD     │ Found but ancient version           │
-  ├─────────┼─────────────────────────────────────┤
-  │ BROKEN  │ Found but can't execute             │
-  └─────────┴─────────────────────────────────────┘
+  
+   Status             Meaning  
 
+  │ OK      │ Installed, good version, path known │
+
+  │ MISSING │ Not found anywhere                  │
+
+  │ OLD     │ Found but ancient version           │
+
+  │ BROKEN  │ Found but can't execute             │
+  
   Key design decisions
 
   - Read-only by default — report first, fix only when you ask
